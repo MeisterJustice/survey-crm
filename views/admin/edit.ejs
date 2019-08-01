@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+
+
+<h1>edit route</h1>
+<div>
+    <div>
+        <form action="/admin/<%= editQuestion.id %>?_method=PUT" method="post">
+            <div>
+                <label for="sex">sex</label>
+                <input type="text" name="sex" value="<%= editQuestion.sex %>">
+            </div>
+            <div>
+                <label for="age">age</label>
+                <input type="text" name="ageRange" value="<%= editQuestion.ageRange %>">
+            </div>
+            <div>
+                <label for="photographer">photographer?</label>
+                <input type="text" name="photographer" value="<%= editQuestion.photographer %>">
+            </div>
+            <div>
+                <label for="interested">interested?</label>
+                <input type="text" name="interested" value="<%= editQuestion.interested %>">
+            </div>
+            <button>submit</button>
+        </form>
+    </div>
+</div>
+<p></p>
+<p></p>
+<p></p>
+
+<% include ../partials/footer %>

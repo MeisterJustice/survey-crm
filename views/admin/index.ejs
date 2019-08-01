@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+
+<h1>admin route</h1>
+
+<div>
+    <% questions.forEach(function(data) { %>
+        <div><%= data.name %></div>
+        <div><%= data.sex %></div>
+        <div><%= data.ageRange %></div>
+        <div><%= data.maritalStatus %></div>
+        <div><%= data.photographer %></div>
+        <div><%= data.interested %></div>
+        <div><%= data.dateCreated %></div>
+        <div>
+            <a href="/admin/<%=data.id%>">show more</a>
+        </div>
+        <div>
+            <form action="/admin/<%= data.id %>?_method=DELETE" method="POST">
+                <button>delete</button>
+            </form>
+        </div>
+        <hr>
+        <hr>
+    <% }) %>
+</div>
+
+<% include ../partials/footer %>
